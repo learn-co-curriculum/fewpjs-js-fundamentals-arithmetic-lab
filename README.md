@@ -399,12 +399,8 @@ than the desired range (`1` to `10`), so we add one at the end of the equation.
 Try it out in the JS console!
 
 ## Assignment
-It's time for your first solo assignment since joining the Flatbook team!
 
-Here at Flatbook HQ, we're a bit overwhelmed by all of the user data we've been
-collecting, and we need some help crunching the numbers.
-
-There are three challenges we need you to solve. Code your solution in
+There are four challenges we need you to solve. Code your solution in
 `index.js`. We'll provide some brief instructions here, but you should really
 rely on the test failure messages to guide your code.
 
