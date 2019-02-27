@@ -11,14 +11,15 @@ There are three challenges we need you to solve. Code your solution in
 rely on the test failure messages to guide your code.
 
 ## Instructions
-1. When we started out, we assigned ID numbers sequentially to new users, so our first user ID is `1`, second is `2`, third is `3`, and so on. That was fine when we were a fledgling company, but, now that we have millions of active users, it would be easier if all of our user IDs were the same length. We'd like the IDs to start from `1000000001` (one billion and one) instead of `1`. Create a variable named `newID` that adds `1000000000` to the value in `oldID`. Don't define `oldID` — assume the system already knows what it is just by using that variable name.
 
-2. During the sign-up process, we require new users to provide their age. However,the junior developer tasked with creating the sign-up form forgot to validate that the user had entered an integer, so we have a lot of accounts floating around with weird ages like `21.7` or `9.5`. We'd like you to help us identify which users need to be prompted to reenter their age. Create a variable named `ageIsValid` that checks whether the value in `currentAge` is a valid integer. You don't have to define `currentAge` — the system will take care of that part.
-
-3. Finally, we need a way to randomly select a user by their ID number. As you know, we have millions of active users, but since this is your first assignment we'll limit the testing pool to twenty users with IDs between `1000000001` and `1000000020`. You're tasked with creating three variables:
-- `randomNumber`, which should contain a randomly-generated number between `0` (inclusive) and `20` (exclusive).
-- `randomInteger`, which should take the value in `randomNumber` and round it down to the nearest integer.
-- `randomUserID`, which should convert `randomInteger` into a valid ID number — an integer between `1000000001` and `1000000020`.
+1. Create a variable called `multiply` that will multiply `var1` and `var2`
+   whose results will equal "62".
+2. Create a variable called `random` that will generate a random integer greater
+   than 0.
+3. Create a variable called `mod` set to an equation whose remainder is equal to
+   "4". 
+4. Create a variable called `max` that will return "20" as the highest number in
+   the set.
 
 ![Good luck](https://user-images.githubusercontent.com/17556281/28846833-e671480c-76da-11e7-9285-17b5c592e065.gif)
 
