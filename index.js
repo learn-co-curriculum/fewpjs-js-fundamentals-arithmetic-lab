@@ -1,5 +1,8 @@
-const testVar = {}
+/*
+Variables defined in the test suite:
+- oldID
+- currentAge
+You should NOT try to redefine any of the above variables.
+*/
 
-function testFunc() {
-  return "hi"
-}
+// Write your code below this line!
