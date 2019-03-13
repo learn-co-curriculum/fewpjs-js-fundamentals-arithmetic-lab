@@ -2,20 +2,21 @@
 
 ## Learning Goals
 
-*  Recognize the limitations of math in JavaScript
-*  Employ operators to perform arithmetic and assign values to variables
-*  Explain what `NaN` is
-*  Use built-in objects like `Math` and `Number` to accomplish complex tasks
+- Recognize the limitations of math in JavaScript
+- Employ operators to perform arithmetic and assign values to variables
+- Explain what `NaN` is
+- Use built-in objects like `Math` and `Number` to accomplish complex tasks
 
 ## Introduction
 
 We're going to discuss a number of the common operators and objects we'll use to
 perform arithmetic operations in JavaScript.
 
-In the browser's JavaScript console, we can test out all of the examples in this lesson.
-Remember that we can't redeclare variables previously declared with `const` or `let`,
-so the page may have to be refreshed (which wipes away all declared variables) or 
-different variable names can be chosen than those in the examples.
+In the browser's JavaScript console, we can test out all of the examples in this
+lesson. Remember that we can't redeclare variables previously declared with
+`const` or `let`, so the page may have to be refreshed (which wipes away all
+declared variables) or different variable names can be chosen than those in the
+examples.
 
 ## Recognize the Limitations of Math in JavaScript
 
@@ -38,13 +39,14 @@ of the arithmetic we can perform with JavaScript. For example:
 ```
 
 You shouldn't waste too much time diving into why this happens, but it basically
-boils down to the language, once again, trying to be too user-friendly. Under the
-hood, JavaScript stores numbers in binary (base-2) format, as a series of `1`s
-and `0`s, but it displays numbers in the more human-readable decimal (base-10)
-format. The problem that the above code snippet highlights is that it's really
-easy to represent something like `1/10` in decimal (`0.1`) but impossible to
-do it in binary (`0.0001100110011...`). It's the exact same problem that the
-decimal system has in trying to represent `1/3` as `0.33333333333...`.
+boils down to the language, once again, trying to be too user-friendly. Under
+the hood, JavaScript stores numbers in binary (base-2) format, as a series of
+`1`s and `0`s, but it displays numbers in the more human-readable decimal
+(base-10) format. The problem that the above code snippet highlights is that
+it's really easy to represent something like `1/10` in decimal (`0.1`) but
+impossible to do it in binary (`0.0001100110011...`). It's the exact same
+problem that the decimal system has in trying to represent `1/3` as
+`0.33333333333...`.
 
 The only time you'd really have to worry about this is if you needed to
 calculate something to a high degree of precision, like interest payments for a
@@ -117,12 +119,12 @@ right number:
 
 ### Order of Operations
 
-JavaScript evaluates compound arithmetic operations by following the standard order
-of operations used in basic math. Anything in parentheses has highest priority;
-exponentiation is second; then multiplication, division, and remainder; and, finally,
-addition and subtraction, in order from left to right. This is how the JavaScript
-compiler works. You can learn more about this in the **resources** section at the end
-of the lesson. For example:
+JavaScript evaluates compound arithmetic operations by following the standard
+order of operations used in basic math. Anything in parentheses has highest
+priority; exponentiation is second; then multiplication, division, and
+remainder; and, finally, addition and subtraction, in order from left to right.
+This is how the JavaScript compiler works. You can learn more about this in the
+**resources** section at the end of the lesson. For example:
 
 `( )` :arrow_right: `**` :arrow_right: `*` `/` `%` :arrow_right: `+` `-`
 
@@ -244,7 +246,7 @@ counter++;
 ```
 
 The JavaScript engine can't add `1` to `undefined`, so it tells us the result is
-**Not a Number** — `NaN`. 
+**Not a Number** — `NaN`.
 
 **_Top Tip_**: Much like `undefined`, you should never assign `NaN` as the value
 of a variable and instead let it be a signal that some weird maths are happening
@@ -308,10 +310,10 @@ argument is the base that should be used in parsing (e.g., `2` for binary or
 `10` for decimal). For example, `100` is `100` in decimal but `4` in binary:
 
 ```js
-Number.parseInt('100', 10);
+Number.parseInt("100", 10);
 //=> 100
 
-Number.parseInt('100', 2);
+Number.parseInt("100", 2);
 //=> 4
 ```
 
@@ -324,7 +326,7 @@ confusion.
 parsed into a floating-point number:
 
 ```js
-Number.parseFloat('3.14159');
+Number.parseFloat("3.14159");
 //=> 3.14159
 ```
 
@@ -411,19 +413,20 @@ rely on the test failure messages to guide your code.
 2. Create a variable called `random` that will generate a random integer greater
    than 0.
 3. Create a variable called `mod` set to an equation whose remainder is equal to
-   "4". 
+   "4".
 4. Create a variable called `max` that will return "20" as the highest number in
    the set.
 
 ![Good luck](https://user-images.githubusercontent.com/17556281/28846833-e671480c-76da-11e7-9285-17b5c592e065.gif)
 
 ## Resources
+
 - MDN
-  + [Basic math in JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math)
-  + [Arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
-  + [Operator precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
-  + [Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
-  + [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)
-  + [`Number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
-  + [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+  - [Basic math in JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math)
+  - [Arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
+  - [Operator precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+  - [Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+  - [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)
+  - [`Number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+  - [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 - [2ality — How numbers are encoded in JavaScript](http://2ality.com/2012/04/number-encoding.html)
