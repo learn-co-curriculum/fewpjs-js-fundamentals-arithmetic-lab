@@ -2,10 +2,10 @@
 
 ## Learning Goals
 
-*  Recognize the limitations of math in JavaScript
-*  Employ operators to perform arithmetic and assign values to variables
-*  Explain what `NaN` is
-*  Use built-in objects like `Math` and `Number` to accomplish complex tasks
+* Recognize the limitations of math in JavaScript
+* Employ operators to perform arithmetic and assign values to variables
+* Explain what `NaN` is
+* Use built-in objects like `Math` and `Number` to accomplish complex tasks
 
 ## Introduction
 
@@ -14,7 +14,7 @@ perform arithmetic operations in JavaScript.
 
 In the browser's JavaScript console, we can test out all of the examples in this lesson.
 Remember that we can't redeclare variables previously declared with `const` or `let`,
-so the page may have to be refreshed (which wipes away all declared variables) or 
+so the page may have to be refreshed (which wipes away all declared variables) or
 different variable names can be chosen than those in the examples.
 
 ## Recognize the Limitations of Math in JavaScript
@@ -117,8 +117,8 @@ right number:
 
 ### Order of Operations
 
-JavaScript evaluates compound arithmetic operations by following the standard order
-of operations used in basic math. Anything in parentheses has highest priority;
+JavaScript evaluates compound arithmetic operations by following the standard [order
+of operations][pemdas] used in basic math. Anything in parentheses has highest priority;
 exponentiation is second; then multiplication, division, and remainder; and, finally,
 addition and subtraction, in order from left to right. This is how the JavaScript
 compiler works. You can learn more about this in the **resources** section at the end
@@ -244,11 +244,9 @@ counter++;
 ```
 
 The JavaScript engine can't add `1` to `undefined`, so it tells us the result is
-**Not a Number** — `NaN`. 
+**Not a Number** — `NaN`.
 
-**_Top Tip_**: Much like `undefined`, you should never assign `NaN` as the value
-of a variable and instead let it be a signal that some weird maths are happening
-in your code.
+> **_Top Tip_**: Much like `undefined`, you should never assign `NaN` as the value of a variable and instead let it be a signal that some weird maths are happening in your code.
 
 ## Use built-in objects like `Math` and `Number` to accomplish complex tasks
 
@@ -406,18 +404,19 @@ rely on the test failure messages to guide your code.
 
 ## Instructions
 
-1. Create a variable called `multiply` that will multiply the variables `num1` and `num2`
-   whose results will equal "62".
+1. Create a variable called `multiply` that will multiply the variables `num1` and `num2`;
+   the result of the multiplication should be `62`.
 2. Create a variable called `random` that will generate a random integer greater
    than 0.
 3. Create a variable called `mod` set to an equation whose remainder is equal to
-   "4".
-4. Create a variable called `max` that will return "20" as the highest number in
+   `4`.
+4. Create a variable called `max` that will return `20` as the highest number in
    the set.
 
 ![Good luck](https://user-images.githubusercontent.com/17556281/28846833-e671480c-76da-11e7-9285-17b5c592e065.gif)
 
 ## Resources
+
 - MDN
   + [Basic math in JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math)
   + [Arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
@@ -427,3 +426,6 @@ rely on the test failure messages to guide your code.
   + [`Number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
   + [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 - [2ality — How numbers are encoded in JavaScript](http://2ality.com/2012/04/number-encoding.html)
+- [Order of Operations][pemdas]
+
+[pemdas]: https://en.wikipedia.org/wiki/Order_of_operations
