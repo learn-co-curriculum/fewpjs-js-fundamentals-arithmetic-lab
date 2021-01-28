@@ -12,19 +12,20 @@
 We're going to discuss a number of the common operators and objects we'll use to
 perform arithmetic operations in JavaScript.
 
-In the browser's JavaScript console, we can test out all of the examples in this lesson.
-Remember that we can't redeclare variables previously declared with `const` or `let`,
-so the page may have to be refreshed (which wipes away all declared variables) or
-different variable names can be chosen than those in the examples.
+In the browser's JavaScript console, we can test out all of the examples in this
+lesson. Remember that we can't redeclare variables previously declared with
+`const` or `let`, so the page may have to be refreshed (which wipes away all
+declared variables) or different variable names can be chosen than those in the
+examples.
 
 ## Recognize the Limitations of Math in JavaScript
 
-**Math is awesome!**
-JavaScript has only a single, all-encompassing `number` type. While other
-languages might have distinct types for integers, decimals, and the like,
-JavaScript represents everything as a double-precision floating-point number,
-or _float_. This imposes some interesting technical limitations on the precision
-of the arithmetic we can perform with JavaScript. For example:
+**Math is awesome!** JavaScript has only a single, all-encompassing `number`
+type. While other languages might have distinct types for integers, decimals,
+and the like, JavaScript represents everything as a double-precision
+floating-point number, or _float_. This imposes some interesting technical
+limitations on the precision of the arithmetic we can perform with JavaScript.
+For example:
 
 ```js
 0.1 * 0.1;
@@ -38,13 +39,14 @@ of the arithmetic we can perform with JavaScript. For example:
 ```
 
 You shouldn't waste too much time diving into why this happens, but it basically
-boils down to the language, once again, trying to be too user-friendly. Under the
-hood, JavaScript stores numbers in binary (base-2) format, as a series of `1`s
-and `0`s, but it displays numbers in the more human-readable decimal (base-10)
-format. The problem that the above code snippet highlights is that it's really
-easy to represent something like `1/10` in decimal (`0.1`) but impossible to
-do it in binary (`0.0001100110011...`). It's the exact same problem that the
-decimal system has in trying to represent `1/3` as `0.33333333333...`.
+boils down to the language, once again, trying to be too user-friendly. Under
+the hood, JavaScript stores numbers in binary (base-2) format, as a series of
+`1`s and `0`s, but it displays numbers in the more human-readable decimal
+(base-10) format. The problem that the above code snippet highlights is that
+it's really easy to represent something like `1/10` in decimal (`0.1`) but
+impossible to do it in binary (`0.0001100110011...`). It's the exact same
+problem that the decimal system has in trying to represent `1/3` as
+`0.33333333333...`.
 
 The only time you'd really have to worry about this is if you needed to
 calculate something to a high degree of precision, like interest payments for a
@@ -59,8 +61,8 @@ JavaScript employs a pretty standard set of arithmetic operators.
 
 #### `+`
 
-We've used the addition operator to concatenate strings, but it's also used
-to add numbers together:
+We've used the addition operator to concatenate strings, but it's also used to
+add numbers together:
 
 ```js
 40 + 2;
@@ -87,8 +89,8 @@ The multiplication operator returns the product of two numbers:
 
 #### `/`
 
-The division operator returns the result of the left number divided by the
-right number:
+The division operator returns the result of the left number divided by the right
+number:
 
 ```js
 9001 / 42;
@@ -97,8 +99,8 @@ right number:
 
 #### `%`
 
-The remainder operator returns the remainder when the left number is divided
-by the right number:
+The remainder operator returns the remainder when the left number is divided by
+the right number:
 
 ```js
 9001 % 42;
@@ -117,12 +119,12 @@ right number:
 
 ### Order of Operations
 
-JavaScript evaluates compound arithmetic operations by following the standard [order
-of operations][pemdas] used in basic math. Anything in parentheses has highest priority;
-exponentiation is second; then multiplication, division, and remainder; and, finally,
-addition and subtraction, in order from left to right. This is how the JavaScript
-compiler works. You can learn more about this in the **resources** section at the end
-of the lesson. For example:
+JavaScript evaluates compound arithmetic operations by following the standard
+[order of operations][pemdas] used in basic math. Anything in parentheses has
+highest priority; exponentiation is second; then multiplication, division, and
+remainder; and, finally, addition and subtraction, in order from left to right.
+This is how the JavaScript compiler works. You can learn more about this in the
+**resources** section at the end of the lesson. For example:
 
 `( )` :arrow_right: `**` :arrow_right: `*` `/` `%` :arrow_right: `+` `-`
 
@@ -246,7 +248,9 @@ counter++;
 The JavaScript engine can't add `1` to `undefined`, so it tells us the result is
 **Not a Number** — `NaN`.
 
-> **_Top Tip_**: Much like `undefined`, you should never assign `NaN` as the value of a variable and instead let it be a signal that some weird maths are happening in your code.
+> **_Top Tip_**: Much like `undefined`, you should never assign `NaN` as the
+> value of a variable and instead let it be a signal that some weird maths are
+> happening in your code.
 
 ## Use built-in objects like `Math` and `Number` to accomplish complex tasks
 
@@ -417,15 +421,15 @@ rely on the test failure messages to guide your code.
 
 ## Resources
 
-- MDN
-  + [Basic math in JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math)
-  + [Arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
-  + [Operator precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
-  + [Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
-  + [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)
-  + [`Number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
-  + [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
-- [2ality — How numbers are encoded in JavaScript](http://2ality.com/2012/04/number-encoding.html)
-- [Order of Operations][pemdas]
+* MDN
+  * [Basic math in JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math)
+  * [Arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
+  * [Operator precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+  * [Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+  * [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)
+  * [`Number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+  * [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+* [2ality — How numbers are encoded in JavaScript](http://2ality.com/2012/04/number-encoding.html)
+* [Order of Operations][pemdas]
 
 [pemdas]: https://en.wikipedia.org/wiki/Order_of_operations
